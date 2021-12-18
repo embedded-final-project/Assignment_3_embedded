@@ -24,7 +24,7 @@ void main() {
  LCD_In();
 
  while(1){
-    Temp_Read(1);
+    Temp_reading = Temp_Read(1);
     Display_Temp(Temp_reading);
     fan_operation(Temp_reading);
  }
