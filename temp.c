@@ -1,4 +1,4 @@
-  #include "LCD_N.h"
+  #include "temp.h"
  void Temp_init(){
     TRISD = 0;
     TRISA = 0xFF;
