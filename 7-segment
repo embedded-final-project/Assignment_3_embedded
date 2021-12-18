@@ -1,1 +1,36 @@
 
+ 
+#define Digit1 PORTA.RA0
+#define Digit2 PORTA.RA1
+
+unsigned char Display(unsigned char digit)
+{
+ unsigned char pattern;
+ unsigned char SEGMENT_MAP[10] =
+ {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
+      pattern = SEGMENT_MAP[digit];
+      return (pattern);     
+ }
+ 
+ void main()
+ {
+ unsigned char MSD,LSD, count= 22;
+ TRISA = 0;
+ TRISB = 0;
+ Digit1 = 0;
+ Digit2 = 0;
+
+  while(1){
+        MSD = count / 10;
+        LATB = Display(MSD);
+        Digit2 = 1;
+        Delay_Ms(10);
+        Digit2 =0;
+        
+        LSD = count % 10;
+        LATB = Display(LSD);
+        Digit1 = 1;
+        Delay_Ms(10);
+        Digit1 = 0;
+        }
+ }
