@@ -1,14 +1,14 @@
-#line 1 "C:/Users/DELL/Documents/GitHub/Assignment_3_embedded/Team3.c"
-#line 1 "c:/users/dell/documents/github/assignment_3_embedded/fan_control.h"
+#line 1 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/Team3.c"
+#line 1 "c:/users/glory/documents/github/assignment_3_embedded/fan_control.h"
 void motor_init();
 void fan_circulation();
 void fan_operation(float temperature);
-#line 1 "c:/users/dell/documents/github/assignment_3_embedded/temp.h"
+#line 1 "c:/users/glory/documents/github/assignment_3_embedded/temp.h"
 void Temp_init();
 void LCD_In();
-void Temp_Read(int ADC_pin);
+float Temp_Read(int ADC_pin);
 void Display_Temp(float Temp_reading);
-#line 4 "C:/Users/DELL/Documents/GitHub/Assignment_3_embedded/Team3.c"
+#line 4 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/Team3.c"
 char temp_txt[5];
 
 sbit LCD_RS at LATE2_bit;
@@ -32,7 +32,7 @@ void main() {
  LCD_In();
 
  while(1){
- Temp_Read(1);
+ Temp_reading = Temp_Read(1);
  Display_Temp(Temp_reading);
  fan_operation(Temp_reading);
  }

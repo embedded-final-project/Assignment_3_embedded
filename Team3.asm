@@ -10,20 +10,28 @@ _main:
 	CALL        _LCD_In+0, 0
 ;Team3.c,26 :: 		while(1){
 L_main0:
-;Team3.c,27 :: 		Temp_Read(1);
+;Team3.c,27 :: 		Temp_reading = Temp_Read(1);
 	MOVLW       1
 	MOVWF       FARG_Temp_Read_ADC_pin+0 
 	MOVLW       0
 	MOVWF       FARG_Temp_Read_ADC_pin+1 
 	CALL        _Temp_Read+0, 0
+	MOVF        R0, 0 
+	MOVWF       _Temp_reading+0 
+	MOVF        R1, 0 
+	MOVWF       _Temp_reading+1 
+	MOVF        R2, 0 
+	MOVWF       _Temp_reading+2 
+	MOVF        R3, 0 
+	MOVWF       _Temp_reading+3 
 ;Team3.c,28 :: 		Display_Temp(Temp_reading);
-	MOVF        _Temp_reading+0, 0 
+	MOVF        R0, 0 
 	MOVWF       FARG_Display_Temp_Temp_reading+0 
-	MOVF        _Temp_reading+1, 0 
+	MOVF        R1, 0 
 	MOVWF       FARG_Display_Temp_Temp_reading+1 
-	MOVF        _Temp_reading+2, 0 
+	MOVF        R2, 0 
 	MOVWF       FARG_Display_Temp_Temp_reading+2 
-	MOVF        _Temp_reading+3, 0 
+	MOVF        R3, 0 
 	MOVWF       FARG_Display_Temp_Temp_reading+3 
 	CALL        _Display_Temp+0, 0
 ;Team3.c,29 :: 		fan_operation(Temp_reading);
