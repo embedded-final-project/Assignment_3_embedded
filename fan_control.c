@@ -5,17 +5,6 @@ void motor_init(){
  TRISC = 0b00000100;
  TRISA.F1 = 1;
 }
-
-void fan_circulation(){
- if (PORTC.F2==1 && PORTC.F0 == 1){
-   PORTC = 0b00000010;
-   Delay_ms(100);
- }
- else if (PORTC.F2==1 && PORTC.F3 == 1){
-   PORTC = 0b00010000;
-   Delay_ms(100);
-   }
-}
 void fan_operation(float temperature){
     if (Temperature>35){
        PORTC.F3 = 1;
@@ -29,3 +18,21 @@ void fan_operation(float temperature){
        PORTC = 0b00000000;
        }
        }
+void fan_circulation(){
+ if (PORTC.F2==1 && PORTC.F0 == 1){
+   PORTC = 0b00000010;
+   Delay_ms(100);
+ }
+ else if (PORTC.F2==1 && PORTC.F3 == 1){
+   PORTC = 0b00010000;
+   Delay_ms(100);
+   }
+ else if (PORTC.F2==0 && PORTC.F1 == 1){
+   PORTC = 0b00000001;
+   Delay_ms(100);
+   }
+ else if (PORTC.F2==0 && PORTC.F4 == 1){
+   PORTC = 0b00001000;
+   Delay_ms(100);
+   }
+}
