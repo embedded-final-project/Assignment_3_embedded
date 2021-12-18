@@ -1,14 +1,16 @@
-0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -DL -O11111114 -fo8 -N"C:\Users\DELL\Documents\GitHub\Assignment_3_embedded\Team3.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\DELL\Documents\GitHub\Assignment_3_embedded\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "Team3.c" "temp.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_ADC_A_C.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -DL -O11111114 -fo8 -N"C:\Users\DELL\Documents\GitHub\Assignment_3_embedded\Team3.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\DELL\Documents\GitHub\Assignment_3_embedded\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "Team3.c" "temp.c" "fan_control.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_ADC_A_C.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
 hint: 0	1139	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
-diagnostics: 0	122	Compilation Started	Team3.c
-diagnostics: 3	123	Compiled Successfully	Team3.c
+diagnostics: 0	122	Compilation Started	fan_control.h
+diagnostics: 31	123	Compiled Successfully	Team3.c
 diagnostics: 0	122	Compilation Started	temp.h
 diagnostics: 30	123	Compiled Successfully	temp.c
 hint: 14	1164	Variable 'Temp_reading' has been eliminated by optimizer	temp.c
-diagnostics: 0	127	All files Compiled in 1375 ms	 
-hint: 0	1144	Used RAM (bytes): 0 (1%)  Free RAM (bytes): 1515 (99%)	Used RAM (bytes): 0 (1%)  Free RAM (bytes): 1515 (99%)
-hint: 0	1144	Used ROM (bytes): 46 (1%)  Free ROM (bytes): 32722 (99%)	Used ROM (bytes): 46 (1%)  Free ROM (bytes): 32722 (99%)
+diagnostics: 0	122	Compilation Started	fan_control.h
+diagnostics: 31	123	Compiled Successfully	fan_control.c
+diagnostics: 0	127	All files Compiled in 1735 ms	 
+hint: 0	1144	Used RAM (bytes): 81 (5%)  Free RAM (bytes): 1434 (95%)	Used RAM (bytes): 81 (5%)  Free RAM (bytes): 1434 (95%)
+hint: 0	1144	Used ROM (bytes): 3449 (11%)  Free ROM (bytes): 29319 (89%)	Used ROM (bytes): 3449 (11%)  Free ROM (bytes): 29319 (89%)
 diagnostics: 0	125	Project Linked Successfully	Team3.mcppi
-diagnostics: 0	128	Linked in 94 ms	 
-diagnostics: 0	129	Project 'Team3.mcppi' completed: 1687 ms	 
-diagnostics: 0	103	Finished successfully: 18 Dec 2021, 23:20:15	Team3.mcppi
+diagnostics: 0	128	Linked in 156 ms	 
+diagnostics: 0	129	Project 'Team3.mcppi' completed: 2094 ms	 
+diagnostics: 0	103	Finished successfully: 19 Dec 2021, 00:09:17	Team3.mcppi
