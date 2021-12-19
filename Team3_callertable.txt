@@ -70,8 +70,3 @@ main
 	fan_operation
 		Compare_Double
 		fan_circulation
-	motor_on_uart
-		__CC2DW
-		UART1_Write_Text
-			UART1_Write
-		UART1_Write
