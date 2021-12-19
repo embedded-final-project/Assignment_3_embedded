@@ -1,12 +1,12 @@
 [DEVICE]
 Name=P18F452
-Clock=8000000
+Clock=4000000
 [MEMORY_MODEL]
 Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Examples\Development Systems\EasyPIC PRO v8\USB\HID Read Write Interrupt\USB.c
+Value=Virtual_Terminal.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -22,7 +22,8 @@ File2=fan_control.c
 File3=i2c_manual.c
 File4=Rtc.c
 File5=Eeprom_Ext.c
-Count=6
+File6=Virtual_Terminal.c
+Count=7
 [BINARIES]
 Count=0
 [IMAGES]
@@ -30,11 +31,9 @@ Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
 File0=Team3.c
-File1=fan_control.c
-File2=fan_control.h
-File3=temp.c
-File4=..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Examples\Development Systems\EasyPIC PRO v8\USB\HID Read Write Interrupt\USB.c
-Count=5
+File1=Virtual_Terminal.c
+File2=Virtual_Terminal.h
+Count=3
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -51,7 +50,8 @@ File1=fan_control.h
 File2=Rtc.h
 File3=Eeprom_Ext.h
 File4=i2c_manual.h
-Count=5
+File5=Virtual_Terminal.h
+Count=6
 [PLDS]
 Count=0
 [Useses]
@@ -68,7 +68,7 @@ IVT_BASE=00000008
 [EXPANDED_NODES]
 0=Team3.mcppi
 1=Sources
-8=Header Files
+9=Header Files
 Count=3
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries

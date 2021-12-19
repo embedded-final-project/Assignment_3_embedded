@@ -4,6 +4,7 @@ _main:
 	CALL        _motor_init+0, 0
 	CALL        _Temp_init+0, 0
 	CALL        _LCD_In+0, 0
+	CALL        _temp_on_uart+0, 0
 L_main0:
 	MOVLW       2
 	MOVWF       FARG_Temp_Read_ADC_pin+0 
@@ -36,6 +37,7 @@ L_main0:
 	MOVF        _Temp_reading+3, 0 
 	MOVWF       FARG_fan_operation_temperature+3 
 	CALL        _fan_operation+0, 0
+	CALL        _motor_on_uart+0, 0
 	GOTO        L_main0
 L_end_main:
 	GOTO        $+0

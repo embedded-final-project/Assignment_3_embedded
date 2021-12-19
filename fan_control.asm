@@ -84,19 +84,16 @@ _fan_circulation:
 L__fan_circulation26:
 	MOVLW       2
 	MOVWF       PORTC+0 
-	MOVLW       2
-	MOVWF       R11, 0
-	MOVLW       4
+	MOVLW       130
 	MOVWF       R12, 0
-	MOVLW       186
+	MOVLW       221
 	MOVWF       R13, 0
 L_fan_circulation7:
 	DECFSZ      R13, 1, 1
 	BRA         L_fan_circulation7
 	DECFSZ      R12, 1, 1
 	BRA         L_fan_circulation7
-	DECFSZ      R11, 1, 1
-	BRA         L_fan_circulation7
+	NOP
 	NOP
 	GOTO        L_fan_circulation8
 L_fan_circulation6:
@@ -107,19 +104,16 @@ L_fan_circulation6:
 L__fan_circulation25:
 	MOVLW       16
 	MOVWF       PORTC+0 
-	MOVLW       2
-	MOVWF       R11, 0
-	MOVLW       4
+	MOVLW       130
 	MOVWF       R12, 0
-	MOVLW       186
+	MOVLW       221
 	MOVWF       R13, 0
 L_fan_circulation12:
 	DECFSZ      R13, 1, 1
 	BRA         L_fan_circulation12
 	DECFSZ      R12, 1, 1
 	BRA         L_fan_circulation12
-	DECFSZ      R11, 1, 1
-	BRA         L_fan_circulation12
+	NOP
 	NOP
 	GOTO        L_fan_circulation13
 L_fan_circulation11:
@@ -130,19 +124,16 @@ L_fan_circulation11:
 L__fan_circulation24:
 	MOVLW       1
 	MOVWF       PORTC+0 
-	MOVLW       2
-	MOVWF       R11, 0
-	MOVLW       4
+	MOVLW       130
 	MOVWF       R12, 0
-	MOVLW       186
+	MOVLW       221
 	MOVWF       R13, 0
 L_fan_circulation17:
 	DECFSZ      R13, 1, 1
 	BRA         L_fan_circulation17
 	DECFSZ      R12, 1, 1
 	BRA         L_fan_circulation17
-	DECFSZ      R11, 1, 1
-	BRA         L_fan_circulation17
+	NOP
 	NOP
 	GOTO        L_fan_circulation18
 L_fan_circulation16:
@@ -153,19 +144,16 @@ L_fan_circulation16:
 L__fan_circulation23:
 	MOVLW       8
 	MOVWF       PORTC+0 
-	MOVLW       2
-	MOVWF       R11, 0
-	MOVLW       4
+	MOVLW       130
 	MOVWF       R12, 0
-	MOVLW       186
+	MOVLW       221
 	MOVWF       R13, 0
 L_fan_circulation22:
 	DECFSZ      R13, 1, 1
 	BRA         L_fan_circulation22
 	DECFSZ      R12, 1, 1
 	BRA         L_fan_circulation22
-	DECFSZ      R11, 1, 1
-	BRA         L_fan_circulation22
+	NOP
 	NOP
 L_fan_circulation21:
 L_fan_circulation18:

@@ -19,6 +19,11 @@ main
 					Delay_1us
 					Delay_5500us
 					Delay_50us
+	temp_on_uart
+		UART1_Init
+		UART1_Write_Text
+			UART1_Write
+		UART1_Write
 	Temp_Read
 		ADC_Read
 			Delay_22us
@@ -65,3 +70,8 @@ main
 	fan_operation
 		Compare_Double
 		fan_circulation
+	motor_on_uart
+		__CC2DW
+		UART1_Write_Text
+			UART1_Write
+		UART1_Write
