@@ -1,2 +1,6 @@
 
 *.cp
+*.mcl
+*.dct
+*.dic
+*.log
