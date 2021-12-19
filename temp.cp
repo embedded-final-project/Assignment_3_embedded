@@ -1,10 +1,10 @@
-#line 1 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/temp.c"
-#line 1 "c:/users/glory/documents/github/assignment_3_embedded/temp.h"
+#line 1 "P:/Final_Projects_Github/Group_3/temp.c"
+#line 1 "p:/final_projects_github/group_3/temp.h"
 void Temp_init();
 void LCD_In();
 float Temp_Read(int ADC_pin);
 void Display_Temp(float Temp_reading);
-#line 2 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/temp.c"
+#line 2 "P:/Final_Projects_Github/Group_3/temp.c"
  void Temp_init(){
  TRISD = 0;
  TRISA = 0xFF;

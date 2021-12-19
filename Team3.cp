@@ -1,14 +1,14 @@
-#line 1 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/Team3.c"
-#line 1 "c:/users/glory/documents/github/assignment_3_embedded/fan_control.h"
+#line 1 "P:/Final_Projects_Github/Group_3/Team3.c"
+#line 1 "p:/final_projects_github/group_3/fan_control.h"
 void motor_init();
 void fan_circulation();
 void fan_operation(float temperature);
-#line 1 "c:/users/glory/documents/github/assignment_3_embedded/temp.h"
+#line 1 "p:/final_projects_github/group_3/temp.h"
 void Temp_init();
 void LCD_In();
 float Temp_Read(int ADC_pin);
 void Display_Temp(float Temp_reading);
-#line 4 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/Team3.c"
+#line 4 "P:/Final_Projects_Github/Group_3/Team3.c"
 char temp_txt[5];
 
 sbit LCD_RS at LATE2_bit;

@@ -1,9 +1,9 @@
-#line 1 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/fan_control.c"
-#line 1 "c:/users/glory/documents/github/assignment_3_embedded/fan_control.h"
+#line 1 "P:/Final_Projects_Github/Group_3/fan_control.c"
+#line 1 "p:/final_projects_github/group_3/fan_control.h"
 void motor_init();
 void fan_circulation();
 void fan_operation(float temperature);
-#line 3 "C:/Users/Glory/Documents/GitHub/Assignment_3_embedded/fan_control.c"
+#line 3 "P:/Final_Projects_Github/Group_3/fan_control.c"
 void motor_init(){
  ADCON1 = 0x03;
  TRISC = 0b00000100;
