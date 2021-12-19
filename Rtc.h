@@ -1,0 +1,1 @@
+void Rtc_GetDateTime(volatile char date[], volatile char time[]);
