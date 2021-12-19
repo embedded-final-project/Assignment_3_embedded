@@ -6,7 +6,11 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
+<<<<<<< HEAD
 Value=seven_seg.c
+=======
+Value=i2c_manual.h
+>>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -19,7 +23,10 @@ Value=
 File0=Team3.c
 File1=temp.c
 File2=fan_control.c
-Count=3
+File3=i2c_manual.c
+File4=Rtc.c
+File5=Eeprom_Ext.c
+Count=6
 [BINARIES]
 Count=0
 [IMAGES]
@@ -29,9 +36,19 @@ ActiveImageIndex=-1
 File0=Team3.c
 File1=fan_control.c
 File2=fan_control.h
+<<<<<<< HEAD
 File3=seven_seg.c
 File4=seven_seg.h
 Count=5
+=======
+File3=i2c_manual.c
+File4=Rtc.c
+File5=Eeprom_Ext.c
+File6=Rtc.h
+File7=Eeprom_Ext.h
+File8=i2c_manual.h
+Count=9
+>>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -45,7 +62,10 @@ Count=0
 [HEADERS]
 File0=temp.h
 File1=fan_control.h
-Count=2
+File2=Rtc.h
+File3=Eeprom_Ext.h
+File4=i2c_manual.h
+Count=5
 [PLDS]
 Count=0
 [Useses]
@@ -61,7 +81,11 @@ IVT_BASE=00000008
 [EXPANDED_NODES]
 0=Team3.mcppi
 1=Sources
+<<<<<<< HEAD
 5=Header Files
+=======
+8=Header Files
+>>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
 Count=3
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
