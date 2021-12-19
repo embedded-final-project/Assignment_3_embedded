@@ -226,6 +226,7 @@ dccpx
 dccpx_bit
 dec2bcd
 dec2bcd16
+delay
 delay_100ms
 delay_10ms
 delay_10us
@@ -268,6 +269,8 @@ eeip
 eeip_bit
 eepgd
 eepgd_bit
+eepromext_read
+eepromext_write
 equals_double
 f
 fan_circulation
@@ -317,6 +320,11 @@ hextoshort
 hextoword
 i2c_dat
 i2c_dat_bit
+i2c_init
+i2c_rb
+i2c_start
+i2c_stop
+i2c_wb
 ibf_trise_bit
 ibov_trise_bit
 ics_auto
@@ -784,6 +792,7 @@ ri
 ri_bit
 rsen
 rsen_bit
+rtc_getdatetime
 rtrim
 rx_
 rx__bit
