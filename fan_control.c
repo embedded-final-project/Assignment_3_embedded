@@ -1,11 +1,11 @@
-      #include "fan_control.h"
+#include "fan_control.h"
 
 void motor_init(){
  ADCON1 = 0x03;
  TRISC = 0b00000100;
  TRISA.F1 = 1;
 }
-void fan_operation(float temperature){
+void fan_operation(float Temperature){
     if (Temperature>35){
        PORTC.F3 = 1;
        fan_circulation();

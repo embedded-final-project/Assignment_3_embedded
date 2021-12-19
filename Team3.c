@@ -19,15 +19,19 @@ sbit LCD_D7_Direction at TRISD7_bit;
 float Temp_reading;
 
 void main() {
+ /*TRISC.F6 = 0;
+ PORTC.F6 =0; */
  motor_init();
  Temp_init();
  LCD_In();
- UART1_Init(9600);
- Delay_ms(100);
- UART1_Write_Text("Temperature");
+ /*UART1_Init(9600);
+ Delay_ms(100);*/
  
  while(1){
-    Temp_reading = Temp_Read(1);
+    /*if (UART1_Data_Ready()==1){
+       UART1_Write_Text("Temperature");
+    }   */
+    Temp_reading = Temp_Read(2);
     Display_Temp(Temp_reading);
     fan_operation(Temp_reading);
  }

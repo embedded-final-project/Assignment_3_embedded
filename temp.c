@@ -17,7 +17,6 @@
     FloatToStr_FixLen(Temp_reading,temp_txt,4);
     Lcd_Out(1,6,temp_txt);
     Lcd_Out(1,12,"Team3");
-    delay_ms(100);
     return Temp_reading;
  }
  void Display_Temp(float Temp_reading){

@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=Team3.c
+Value=..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Examples\Development Systems\EasyPIC PRO v8\USB\HID Read Write Interrupt\USB.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -32,7 +32,9 @@ ActiveImageIndex=-1
 File0=Team3.c
 File1=fan_control.c
 File2=fan_control.h
-Count=3
+File3=temp.c
+File4=..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Examples\Development Systems\EasyPIC PRO v8\USB\HID Read Write Interrupt\USB.c
+Count=5
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -114,7 +116,7 @@ Count=3
 1591=FT812
 1592=FT812
 1939=mikroSDK Libraries
-Count=45
+Count=46
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]
