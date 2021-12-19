@@ -1,4 +1,4 @@
-  #include "temp.h"
+#include "temp.h"
  void Temp_init(){
     TRISD = 0;
     TRISA = 0xFF;
@@ -16,14 +16,15 @@
     Temp_reading = (float)ADC_Read(ADC_pin)*0.48828125;
     FloatToStr_FixLen(Temp_reading,temp_txt,4);
     Lcd_Out(1,6,temp_txt);
+    Lcd_Out(1,12,"Team3");
     delay_ms(100);
     return Temp_reading;
  }
  void Display_Temp(float Temp_reading){
       if (Temp_reading>35){
-       Lcd_Out(2,1,"Decreasing"); }
+       Lcd_Out(2,1,"Decreasing FANOFF"); }
     else if(Temp_reading<=30){
-       Lcd_Out(2,1,"Increasing");
+       Lcd_Out(2,1,"IncreasingFANON");
  }
     else {
       Lcd_Out(2,1,"Reached");
