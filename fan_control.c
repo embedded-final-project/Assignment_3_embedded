@@ -1,4 +1,4 @@
-      #include "fan_control.h"
+#include "fan_control.h"
 
 void motor_init(){
  ADCON1 = 0x03;

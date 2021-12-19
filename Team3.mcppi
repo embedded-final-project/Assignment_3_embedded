@@ -7,7 +7,7 @@ Value=0
 Value=0
 [ACTIVE_TAB]
 <<<<<<< HEAD
-Value=seven_seg.c
+Value=seven_seg.h
 =======
 Value=i2c_manual.h
 >>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
@@ -36,19 +36,11 @@ ActiveImageIndex=-1
 File0=Team3.c
 File1=fan_control.c
 File2=fan_control.h
-<<<<<<< HEAD
 File3=seven_seg.c
 File4=seven_seg.h
-Count=5
-=======
-File3=i2c_manual.c
-File4=Rtc.c
-File5=Eeprom_Ext.c
-File6=Rtc.h
-File7=Eeprom_Ext.h
-File8=i2c_manual.h
-Count=9
->>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
+File5=temp.c
+File6=temp.h
+Count=7
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -81,11 +73,7 @@ IVT_BASE=00000008
 [EXPANDED_NODES]
 0=Team3.mcppi
 1=Sources
-<<<<<<< HEAD
-5=Header Files
-=======
 8=Header Files
->>>>>>> 3c4791a1b7d267c39e67a6f291f934805cb8ec3b
 Count=3
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries

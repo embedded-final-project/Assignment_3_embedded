@@ -93,7 +93,17 @@ _Temp_Read:
 	MOVLW       hi_addr(Temp_Read_temp_txt_L0+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
-;temp.c,19 :: 		delay_ms(100);
+;temp.c,19 :: 		Lcd_Out(1,12,"Team3");
+	MOVLW       1
+	MOVWF       FARG_Lcd_Out_row+0 
+	MOVLW       12
+	MOVWF       FARG_Lcd_Out_column+0 
+	MOVLW       ?lstr2_temp+0
+	MOVWF       FARG_Lcd_Out_text+0 
+	MOVLW       hi_addr(?lstr2_temp+0)
+	MOVWF       FARG_Lcd_Out_text+1 
+	CALL        _Lcd_Out+0, 0
+;temp.c,20 :: 		delay_ms(100);
 	MOVLW       2
 	MOVWF       R11, 0
 	MOVLW       4
@@ -108,7 +118,7 @@ L_Temp_Read0:
 	DECFSZ      R11, 1, 1
 	BRA         L_Temp_Read0
 	NOP
-;temp.c,20 :: 		return Temp_reading;
+;temp.c,21 :: 		return Temp_reading;
 	MOVF        Temp_Read_Temp_reading_L0+0, 0 
 	MOVWF       R0 
 	MOVF        Temp_Read_Temp_reading_L0+1, 0 
@@ -117,15 +127,15 @@ L_Temp_Read0:
 	MOVWF       R2 
 	MOVF        Temp_Read_Temp_reading_L0+3, 0 
 	MOVWF       R3 
-;temp.c,21 :: 		}
+;temp.c,22 :: 		}
 L_end_Temp_Read:
 	RETURN      0
 ; end of _Temp_Read
 
 _Display_Temp:
 
-;temp.c,22 :: 		void Display_Temp(float Temp_reading){
-;temp.c,23 :: 		if (Temp_reading>35){
+;temp.c,23 :: 		void Display_Temp(float Temp_reading){
+;temp.c,24 :: 		if (Temp_reading>35){
 	MOVF        FARG_Display_Temp_Temp_reading+0, 0 
 	MOVWF       R4 
 	MOVF        FARG_Display_Temp_Temp_reading+1, 0 
@@ -150,19 +160,19 @@ _Display_Temp:
 	MOVF        R0, 1 
 	BTFSC       STATUS+0, 2 
 	GOTO        L_Display_Temp1
-;temp.c,24 :: 		Lcd_Out(2,1,"Decreasing"); }
+;temp.c,25 :: 		Lcd_Out(2,1,"Decreasing FANOFF"); }
 	MOVLW       2
 	MOVWF       FARG_Lcd_Out_row+0 
 	MOVLW       1
 	MOVWF       FARG_Lcd_Out_column+0 
-	MOVLW       ?lstr2_temp+0
+	MOVLW       ?lstr3_temp+0
 	MOVWF       FARG_Lcd_Out_text+0 
-	MOVLW       hi_addr(?lstr2_temp+0)
+	MOVLW       hi_addr(?lstr3_temp+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
 	GOTO        L_Display_Temp2
 L_Display_Temp1:
-;temp.c,25 :: 		else if(Temp_reading<=30){
+;temp.c,26 :: 		else if(Temp_reading<=30){
 	MOVF        FARG_Display_Temp_Temp_reading+0, 0 
 	MOVWF       R4 
 	MOVF        FARG_Display_Temp_Temp_reading+1, 0 
@@ -187,20 +197,7 @@ L_Display_Temp1:
 	MOVF        R0, 1 
 	BTFSC       STATUS+0, 2 
 	GOTO        L_Display_Temp3
-;temp.c,26 :: 		Lcd_Out(2,1,"Increasing");
-	MOVLW       2
-	MOVWF       FARG_Lcd_Out_row+0 
-	MOVLW       1
-	MOVWF       FARG_Lcd_Out_column+0 
-	MOVLW       ?lstr3_temp+0
-	MOVWF       FARG_Lcd_Out_text+0 
-	MOVLW       hi_addr(?lstr3_temp+0)
-	MOVWF       FARG_Lcd_Out_text+1 
-	CALL        _Lcd_Out+0, 0
-;temp.c,27 :: 		}
-	GOTO        L_Display_Temp4
-L_Display_Temp3:
-;temp.c,29 :: 		Lcd_Out(2,1,"Reached");
+;temp.c,27 :: 		Lcd_Out(2,1,"IncreasingFANON");
 	MOVLW       2
 	MOVWF       FARG_Lcd_Out_row+0 
 	MOVLW       1
@@ -210,10 +207,23 @@ L_Display_Temp3:
 	MOVLW       hi_addr(?lstr4_temp+0)
 	MOVWF       FARG_Lcd_Out_text+1 
 	CALL        _Lcd_Out+0, 0
-;temp.c,30 :: 		}
+;temp.c,28 :: 		}
+	GOTO        L_Display_Temp4
+L_Display_Temp3:
+;temp.c,30 :: 		Lcd_Out(2,1,"Reached");
+	MOVLW       2
+	MOVWF       FARG_Lcd_Out_row+0 
+	MOVLW       1
+	MOVWF       FARG_Lcd_Out_column+0 
+	MOVLW       ?lstr5_temp+0
+	MOVWF       FARG_Lcd_Out_text+0 
+	MOVLW       hi_addr(?lstr5_temp+0)
+	MOVWF       FARG_Lcd_Out_text+1 
+	CALL        _Lcd_Out+0, 0
+;temp.c,31 :: 		}
 L_Display_Temp4:
 L_Display_Temp2:
-;temp.c,31 :: 		}
+;temp.c,32 :: 		}
 L_end_Display_Temp:
 	RETURN      0
 ; end of _Display_Temp
