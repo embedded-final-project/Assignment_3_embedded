@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=i2c_manual.h
+Value=Team3.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -32,13 +32,7 @@ ActiveImageIndex=-1
 File0=Team3.c
 File1=fan_control.c
 File2=fan_control.h
-File3=i2c_manual.c
-File4=Rtc.c
-File5=Eeprom_Ext.c
-File6=Rtc.h
-File7=Eeprom_Ext.h
-File8=i2c_manual.h
-Count=9
+Count=3
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -64,7 +58,8 @@ File1=Conversions
 File2=C_String
 File3=Lcd
 File4=Lcd_Constants
-Count=5
+File5=UART
+Count=6
 [INTERRUPT_DEFS]
 VECTOR_MODE=0
 IVT_BASE=00000008
@@ -76,7 +71,50 @@ Count=3
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-Count=3
+7=Button
+9=CAN_SPI
+18=Compact_Flash
+30=Compact_Flash_FAT16
+107=C_Stdlib
+121=C_String
+147=C_Type
+163=EPSON_S1D13700
+206=FT5XX6
+224=FT5XX6_Gesture_Decoder
+227=Glcd
+262=I2C
+282=Lcd
+303=Mmc
+312=Mmc_FAT16
+349=Port_Expander
+379=PrintOut
+385=PWM
+417=Sound
+428=SPI_Ethernet
+481=SPI_Ethernet_24j600
+535=SPI_Glcd
+569=SPI_Lcd
+576=SPI_Lcd8
+583=SPI_T6963C
+627=STMPE610
+661=T6963C
+693=TFT
+728=TFT_16bit
+763=TFT_16bit_Defs
+808=TFT_Defs
+857=TFT_TouchPanel
+868=TFT_TouchPanel_TC
+884=TouchPanel
+896=UART
+911=Additional Libraries
+912=FT800
+913=FT800
+1243=FT810
+1244=FT810
+1591=FT812
+1592=FT812
+1939=mikroSDK Libraries
+Count=45
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]

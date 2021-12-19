@@ -22,7 +22,10 @@ void main() {
  motor_init();
  Temp_init();
  LCD_In();
-
+ UART1_Init(9600);
+ Delay_ms(100);
+ UART1_Write_Text("Temperature");
+ 
  while(1){
     Temp_reading = Temp_Read(1);
     Display_Temp(Temp_reading);
