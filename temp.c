@@ -22,9 +22,9 @@
  }
  void Display_Temp(float Temp_reading, int limit){
       if (Temp_reading>limit+1){ //If Temp_reading is more than limit+1 
-       Lcd_Out(2,1,"Decreasing FANOFF"); } //Lcd prints out decreasing fanoff in row 2 coloumn 1 
+       Lcd_Out(2,1,"Decreasing"); } //Lcd prints out decreasing in row 2 coloumn 1 
     else if(Temp_reading<=limit-1){ //If Temp_reading is less than or equal limit-1
-       Lcd_Out(2,1,"Increasing FANON"); //Lcd prints out increasing fanon in row 2 coloumn 1
+       Lcd_Out(2,1,"Increasing"); //Lcd prints out increasing  in row 2 coloumn 1
  }
     else { //If Temp_reading is in range
       Lcd_Out(2,1,"Reached   "); //LCD prints out reached in row 2 coloumn 1
