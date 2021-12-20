@@ -17,5 +17,23 @@ unsigned char display_digit(unsigned char digit)
  value = SEG_MAP[digit];
  return (value);
  }
+
+
+ void SEV_SEG_write_number(unsigned char number)
+ {     
+        unsigned char LD,RD;
+ 
+        LD = number % 10;
+        LATB = display_digit(LD);
+        Digit2 = 1;
+        delay_ms(10);
+        Digit2 =0;
+
+        RD = number / 10;
+        LATB = Display_digit(RD);
+        Digit1 = 1;
+        delay_ms(10);
+        Digit1 = 0;
+ }
  
  

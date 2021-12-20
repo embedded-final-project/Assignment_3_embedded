@@ -17,3 +17,7 @@ Team3.dbg
 Team3.dbg
 Team3.dlt
 Team3.dlt
+*.asm
+*.hex
+*.lst
+*.txt
