@@ -1,1 +1,46 @@
+int sum =0,x; // to initialize function sum and the variable x
+char txt1[6];
+char txt2[6];
+
+
+char keypadPort at PORTD; //the selected port to connect the keypad
+
+// the connections of lcd 
+sbit LCD_RS at LATA3_bit; //register select line
+sbit LCD_EN at LATB1_bit; //enable select line
+sbit LCD_D4 at LATB2_bit; //line data 4
+sbit LCD_D5 at LATB3_bit; //line data 5
+sbit LCD_D6 at LATB4_bit; //line data 6
+sbit LCD_D7 at LATB5_bit; //line data 7
+
+sbit LCD_RS_Direction at TRISA3_bit; //the direction of register selection pin
+sbit LCD_EN_Direction at TRISB1_bit; //the direction of enable pin
+sbit LCD_D4_Direction at TRISB2_bit;
+sbit LCD_D5_Direction at TRISB3_bit;
+sbit LCD_D6_Direction at TRISB4_bit;
+sbit LCD_D7_Direction at TRISB5_bit;
+
+// the end of lcd connections
+
+void main() {
+
+ // int z; //initialization of z variable 
+  Keypad_Init(); //keypad initialization 
+  lcd_Init(); // lcd initialization 
+  lcd_cmd(_LCD_CLEAR); // to clear the written on the lcd
+  lcd_cmd(_LCD_CURSOR_OFF); // to make the cursor off
+  lcd_out(1,1,"curr no.:");  // display a msg with crr no.  on the lcd screen in the 1st row
+  lcd_out(2,1,"Acc sum :"); 
+  
+  while(1) // endless loop
+  {
+   x = Keypad_Key_Click();  // to store the key code in the variable x
+   WordToStr(x,txt1); // convert outputs words to string
+   lcd_out(1,10,txt1);
+   Delay_ms(100);
+   sum = sum + x; // to make the summation process for variable sum and x
+   WordToStr(sum,txt2);
+   lcd_out(2,10,txt2);
+  }
+ }
 
