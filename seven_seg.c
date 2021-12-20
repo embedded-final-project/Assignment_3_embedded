@@ -30,7 +30,7 @@ unsigned char display_digit(unsigned char digit)
         Digit2 =0;
 
         RD = number / 10;
-        LATB = Display_digit(RD);
+        LATB = display_digit(RD);
         Digit1 = 1;
         delay_ms(10);
         Digit1 = 0;
