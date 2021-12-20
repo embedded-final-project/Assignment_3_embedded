@@ -36,4 +36,3 @@ void uart_data()
         Delay_ms(1000);   //wait for Uart to be more stable for 1000 millisecond
         }
 }
-}
