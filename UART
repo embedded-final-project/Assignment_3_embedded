@@ -15,7 +15,7 @@ x = UART1_Read();
 UART1_Write(x);
 }
 }
-TRISC= 0xff;
+
 
 if (PORTC > 0)     {
 switch (PORTC) {
