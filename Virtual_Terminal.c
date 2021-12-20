@@ -1,6 +1,8 @@
 #include "Virtual_Terminal.h"
 
 void temp_on_uart() {
+  TRISC.F6 = 0;
+  TRISC.F7 = 1;
   UART1_Init(9600);
   Delay_ms(100);
   UART1_Write_Text ("Temperature:");
