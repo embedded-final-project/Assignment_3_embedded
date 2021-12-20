@@ -29,6 +29,6 @@ void main() {
     Temp_reading = Temp_Read(2);
     Display_Temp(Temp_reading);
     fan_operation(Temp_reading);
-    motor_on_uart();
+    //motor_on_uart();
  }
  }
