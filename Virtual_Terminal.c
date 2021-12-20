@@ -1,6 +1,6 @@
-#include "Virtual_Terminal.h"
+#include "Virtual_Terminal.h"   // header file
 
-void temp_on_uart() {
+void temp_on_uart() {   //initialize temp on uart
   TRISC.F6 = 0;       //PORTC and Pin6 is an output pin
   TRISC.F7 = 1;       //PORTC and Pin7 is an input pin
   UART1_Init(9600);     //Initializing Uart module at 9600 bps
@@ -10,7 +10,7 @@ void temp_on_uart() {
   UART1_Write(10);
  }
  
-void uart_data()
+void uart_data()    //intialize uart data
 {
  if (UART1_Data_Ready()==1)     // when the data is received but when ==0 data is not receiving 
  {
@@ -20,7 +20,7 @@ void uart_data()
  }
  } 
 
- void motor_on_uart()  {
+ void motor_on_uart()  {  //intialize motor on uart
  if (PORTC.F3 == 1)   //PORTC and Pin3 is an input
         {
 
