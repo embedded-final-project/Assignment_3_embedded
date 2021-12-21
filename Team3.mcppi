@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=Team3.c
+Value=fan_control.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -33,13 +33,10 @@ Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
 File0=Team3.c
-File1=temp.c
-File2=temp.h
-File3=seven_seg.c
-File4=fan_control.c
-File5=Virtual_Terminal.c
-File6=seven_seg.h
-Count=7
+File1=fan_control.c
+File2=seven_seg.c
+File3=seven_seg.h
+Count=4
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -70,7 +67,8 @@ File3=C_Type
 File4=Conversions
 File5=C_String
 File6=PWM
-Count=7
+File7=Lcd
+Count=8
 [INTERRUPT_DEFS]
 VECTOR_MODE=0
 IVT_BASE=00000008
