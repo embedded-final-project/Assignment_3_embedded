@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=Virtual_Terminal.c
+Value=Team3.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -38,7 +38,8 @@ File2=temp.h
 File3=seven_seg.c
 File4=fan_control.c
 File5=Virtual_Terminal.c
-Count=6
+File6=seven_seg.h
+Count=7
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -68,7 +69,7 @@ File2=UART
 File3=C_Type
 File4=Conversions
 File5=C_String
-File6=Lcd
+File6=PWM
 Count=7
 [INTERRUPT_DEFS]
 VECTOR_MODE=0
@@ -93,32 +94,21 @@ Count=3
 163=EPSON_S1D13700
 200=FLASH
 206=FT5XX6
-224=FT5XX6_Gesture_Decoder
 262=I2C
 278=Keypad4x4
 282=Lcd
-290=Manchester
 297=MemManager
 303=Mmc
 312=Mmc_FAT16
-345=One_Wire
 349=Port_Expander
-382=PS2
-385=PWM
 394=RS485
-401=Software_I2C
-408=Software_SPI
-412=Software_UART
 417=Sound
-420=SPI
 428=SPI_Ethernet
 481=SPI_Ethernet_24j600
 535=SPI_Glcd
 569=SPI_Lcd
 576=SPI_Lcd8
 583=SPI_T6963C
-618=Sprintf
-621=Sprinti
 624=Sprintl
 627=STMPE610
 661=T6963C
@@ -128,9 +118,7 @@ Count=3
 808=TFT_Defs
 857=TFT_TouchPanel
 868=TFT_TouchPanel_TC
-881=Time
 884=TouchPanel
-893=Trigonometry
 896=UART
 911=Additional Libraries
 912=FT800
@@ -140,8 +128,7 @@ Count=3
 1591=FT812
 1592=FT812
 1939=mikroSDK Libraries
-1940=mikroBUS BDF API
-Count=62
+Count=48
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]

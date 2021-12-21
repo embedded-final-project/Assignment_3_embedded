@@ -11,6 +11,7 @@ void motor_init(){
 void fan_operation(float Temperature, int limit){      //Function that return nothing but takes to argument both actual temperature and user preference
     if (Temperature>limit+1){                          //if the actual temperature more than the user preference (1 to create range)
        PORTC.F3 = 1;                                   //Turn on Cooler to decrease temperature
+       PORTC.F4 = 1;
        fan_circulation();                              //Call fan circulation function
        }
     else if(Temperature<limit-1){                     //Test if temperature less tahn user preference
@@ -23,19 +24,24 @@ void fan_operation(float Temperature, int limit){      //Function that return no
        }
 void fan_circulation(){                                 //Define fan circulation function
  if (PORTC.F2==1 && PORTC.F0 == 1){                     //Test if circulation button is one and heater  is clockwise
-   PORTC = 0b00000010;                                  //Turn heater anti clockwise
-   //Delay_ms(100);
+   PORTC.F1 = 1;                                        //Turn heater anti clockwise
  }
  else if (PORTC.F2==1 && PORTC.F3 == 1){                //if button is clicked but cooler is clockwise
-   PORTC = 0b00010000;                                  //change to anticlockwise
-   //Delay_ms(100);
+   PORTC.F4 = 1;                                        //change to anticlockwise
    }
  else if (PORTC.F2==0 && PORTC.F1 == 1){                 //if button is off and heater is anti-clockwise
-   PORTC = 0b00000001;                                   //change to clockwise
-   //Delay_ms(100);
+   PORTC.F0 = 1;                                         //change to clockwise
    }
  else if (PORTC.F2==0 && PORTC.F4 == 1){                 //same as heater for the cooler
-   PORTC = 0b00001000;
-   //Delay_ms(100);
+   PORTC.F3 = 1;
    }
 }
+void pwm_init(){
+  PWM1_Init(500);
+  PWM1_Start();
+ }
+ void pwm_calc(){
+   v = ADC_Read(0);
+   v = v/4;
+   PWM1_Set_Duty(v);
+ }
